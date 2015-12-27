@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Zipcodes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Image path</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @zipcodes.each do |zipcode| %>
+      <tr>
+        <td><%= zipcode.value %></td>
+        <td><%= zipcode.image_path %></td>
+        <td><%= link_to 'Show', zipcode %></td>
+        <td><%= link_to 'Edit', edit_zipcode_path(zipcode) %></td>
+        <td><%= link_to 'Destroy', zipcode, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Zipcode', new_zipcode_path %>
