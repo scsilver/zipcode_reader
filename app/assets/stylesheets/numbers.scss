@@ -1,3 +1,40 @@
 // Place all the styles related to the numbers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+canvas {
+    box-sizing: border-box;
+    border:20px solid black;
+
+}
+ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    border:0;
+    height:30px;
+}
+li {
+    margin:0;
+    padding:0;
+    border:2px solid white;
+    display:block;
+    float:left;
+    width:30px;
+    height:30px;
+    cursor:pointer;
+}
+li.active {
+    border:2px solid #666;
+}
+a, a:hover {
+    margin-top:10px;
+    font-family:Arial, sans-serif;
+    display:block;
+    width:220px;
+    padding:5px 10px;
+    background:#3d6aa2;
+    color:white;
+    text-decoration:none;
+    font-size:2em;
+    text-align:center;
+}

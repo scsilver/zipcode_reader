@@ -25,6 +25,15 @@ class NumbersController < ApplicationController
   # POST /numbers.json
   def create
     @number = Number.new(number_params)
+    nn = NeuralNet.new()
+    nn.set_saved_weights
+    if @number.value > -1
+      nn.test_prop(@number)
+    else
+      @number.value = nn.test(@number)
+    end
+
+
 
     respond_to do |format|
       if @number.save

@@ -80,10 +80,10 @@ RSpec.describe NumbersController, type: :controller do
         expect(assigns(:number)).to be_a(Number)
         expect(assigns(:number)).to be_persisted
       end
-
-      it "redirects to the created number" do
+  
+      it "does not redirect to the created number" do
         post :create, {:number => valid_attributes}, valid_session
-        expect(response).to redirect_to(Number.last)
+        expect(response).to not redirect_to(Number.last)
       end
     end
 
